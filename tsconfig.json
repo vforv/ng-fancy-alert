@@ -17,6 +17,14 @@
     "lib": [
       "es2018",
       "dom"
-    ]
+    ],
+    "paths": {
+      "ng-fancy-alert": [
+        "dist/ng-fancy-alert"
+      ],
+      "ng-fancy-alert/*": [
+        "dist/ng-fancy-alert/*"
+      ]
+    }
   }
 }

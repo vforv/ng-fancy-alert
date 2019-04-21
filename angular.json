@@ -2,5 +2,47 @@
   "$schema": "./node_modules/@angular/cli/lib/config/schema.json",
   "version": 1,
   "newProjectRoot": "projects",
-  "projects": {}
+  "projects": {
+    "ng-fancy-alert": {
+      "root": "projects/ng-fancy-alert",
+      "sourceRoot": "projects/ng-fancy-alert/src",
+      "projectType": "library",
+      "prefix": "ngfa",
+      "schematics": {
+        "@schematics/angular:component": {
+          "styleext": "scss"
+        }
+      },
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-ng-packagr:build",
+          "options": {
+            "tsConfig": "projects/ng-fancy-alert/tsconfig.lib.json",
+            "project": "projects/ng-fancy-alert/ng-package.json"
+          }
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "projects/ng-fancy-alert/src/test.ts",
+            "tsConfig": "projects/ng-fancy-alert/tsconfig.spec.json",
+            "karmaConfig": "projects/ng-fancy-alert/karma.conf.js"
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "projects/ng-fancy-alert/tsconfig.lib.json",
+              "projects/ng-fancy-alert/tsconfig.spec.json"
+            ],
+            "exclude": [
+              "**/node_modules/**"
+            ]
+          }
+        }
+      }
+    }
+  },
+  "defaultProject": "ng-fancy-alert"
 }

@@ -1,0 +1,7 @@
+{
+  "$schema": "../../node_modules/ng-packagr/ng-package.schema.json",
+  "dest": "./dist/ng-fancy-alert",
+  "lib": {
+    "entryFile": "src/public_api.ts"
+  }
+}

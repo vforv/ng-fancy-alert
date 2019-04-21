@@ -1,27 +1,42 @@
-# NgFancyAlert
+# NG FANCY ALERT
+![](http://g.recordit.co/vttD0HN6pk.gif)
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 7.2.3.
+# Installation
 
-## Development server
+```npm install ng-fancy-alert```
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+Step 1. Import NgFancyAlertModule in app.module.ts
 
-## Code scaffolding
+```
+import { NgFancyAlertModule } from 'ng-fancy-alert';
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+imports: [
+    BrowserModule,
+    NgFancyAlertModule
+]
+```
 
-## Build
+Step 2. Add fancy alert in app.component.ts
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
+```
+<ng-fancy-alert></ng-fancy-alert>
+<router-outlet></router-outlet>
+```
 
-## Running unit tests
+Step 3. Call it where you need it with
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+```
+import { NgFancyAlertService } from 'ng-fancy-alert';
 
-## Running end-to-end tests
+export class HomeComponent implements OnInit {
 
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
+  constructor(private srv: NgFancyAlertService) { }
 
-## Further help
+  ngOnInit() {
+  }
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+  public infoAlert() {
+    this.srv.info({title: 'What is Lorem Ipsum?', message: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys standard dummy text ever since the 1500', btnText: 'Nice!', redirect: '/home'})
+  }
+}
+```
