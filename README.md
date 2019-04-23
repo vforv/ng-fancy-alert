@@ -3,7 +3,7 @@
 
 # Installation
 
-```npm install ng-fancy-alert```
+```npm install ng-fancy-alert --save```
 
 Step 1. Import NgFancyAlertModule in app.module.ts
 
@@ -40,3 +40,7 @@ export class HomeComponent implements OnInit {
   }
 }
 ```
+
+#Notice
+
+Don't use .alert-box-content in global style

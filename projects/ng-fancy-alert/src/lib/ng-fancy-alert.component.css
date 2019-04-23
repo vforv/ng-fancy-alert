@@ -18,7 +18,7 @@
     box-shadow: 1px 3px 2px 2px #656060;
 }
 
-.icon {
+.alert-box-content .icon {
     width: 75px;
     height: 75px;
     border-radius: 100%;
@@ -26,43 +26,45 @@
     margin: -40px auto 0;
 }
 
-img{
-    margin-top: 10px;
+.alert-box-content img{
+    margin-top: 8px!important;
+    vertical-align: unset!important;
 }
 
-.icon span {
+.alert-box-content .icon span {
     color: #fff;
     font-size: 50px;
     line-height: 75px;
 }
 
-.btn-ctrl {
+.alert-box-content .btn-ctrl {
     width: 80%;
     margin: 0 auto;
 }
 
-button {
-    width: 80%;
-    color: #fff;
-    margin: 5px 10px;
-    padding: 10px 0;
-    text-transform: uppercase;
-    border-radius: 9px;
-    font-size: 12px;
-    cursor: pointer;
+.alert-box-content button {
+    width: 80%!important;
+    color: #fff!important;
+    margin: 5px 10px!important;
+    padding: 10px 0!important;
+    text-transform: uppercase!important;
+    border-radius: 9px!important;
+    font-size: 12px!important;
+    cursor: pointer!important;
 }
 
-button:focus {
+.alert-box-content button:focus {
     border: none;
     outline: 0;
 }
 
-h3{
+.alert-box-content h3{
     color: #545353;
     font-size: 20px;
+    margin: 10px;
 }
 
-.alert-body{
+.alert-box-content .alert-body{
     color: #616060;
     font-size: 15px;
 }
@@ -83,44 +85,44 @@ h3{
   }
 
   @media only screen and (max-width: 1100px) {
-    .alert-box {
+    .alert-box-content .alert-box {
         width: 50%;
     }
   }
 
   @media only screen and (max-width: 800px) {
-    .alert-box {
+    .alert-box-content .alert-box {
         width: 70%;
     }
   }
 
   @media only screen and (max-width: 500px) {
-    .alert-box {
+    .alert-box-content .alert-box {
         width: 80%;
     }
 
-    .alert-body {
+    .alert-box-content .alert-body {
         font-size: 13px;
     }
 
-    .icon span {
+    .alert-box-content .icon span {
         line-height: 65px;
     }
 
-    h3 {
+    .alert-box-content h3 {
         font-size: 17px;
     }
 
-    button {
+    .alert-box-content button {
         font-size: 11px;
     }
 
-    .icon {
+    .alert-box-content .icon {
         width: 65px;
         height: 65px;
     }
 
-    img{
+    .alert-box-content img{
         margin-top: 0;
         width: 40px;
     }
