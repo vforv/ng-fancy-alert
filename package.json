@@ -1,6 +1,6 @@
 {
   "name": "ng-fancy-alert",
-  "version": "1.2.1",
+  "version": "1.2.3",
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
@@ -8,7 +8,8 @@
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e",
-    "npm_pack": "cd dist/ng-fancy-alert && npm pack"
+    "prepub": "rm -rf dist/ng-fancy-alert && ng build && cp README.md dist/ng-fancy-alert && cd dist/ng-fancy-alert && npm pack",
+    "pub": "npm publish dist/ng-fancy-alert/ng-fancy-alert-*.tgz"
   },
   "dependencies": {
     "@angular/animations": "~7.2.0",
